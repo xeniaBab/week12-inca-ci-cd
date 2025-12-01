@@ -15,10 +15,12 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
       - name: Run Jest Tests
         run: npm run ci:test
+
       - name: Run Cypress Tests
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         env:
           SECRET_COOKIE_PASSWORD: "2gyZ3GDw3LHZQKDhPmPDL3sjREVRXPr8"
         with:
